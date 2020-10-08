@@ -1,13 +1,15 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import GlobalStyle from './styles/global';
+import Home from './pages/Home';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App: React.FC = () => {
   return (
     <>
-      <div className="App">
-        <h1>Hello Word</h1>
-      </div>
+      <Home />
       <GlobalStyle />
+      <ToastContainer />
     </>
   );
 };
