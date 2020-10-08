@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "celebrate": "^13.0.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

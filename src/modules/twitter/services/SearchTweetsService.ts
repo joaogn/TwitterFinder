@@ -1,9 +1,18 @@
-import { injectable } from 'tsyringe';
+import { injectable, inject } from 'tsyringe';
+import ITwitterApiProvider from '@modules/twitter/providers/TwitterApiProvider/models/ITwitterApiProvider';
+import ISearchTweetsResponseDTO from '@modules/twitter/providers/TwitterApiProvider/dtos/ISearchTweetsResponseDTO';
 
 @injectable()
 class SearchTweetsService {
-  public async execute(): Promise<string> {
-    return 'Hello World';
+  constructor(
+    @inject('TwitterApiProvider')
+    private twitterApiProvider: ITwitterApiProvider,
+  ) {}
+
+  public async execute(keyword: string): Promise<ISearchTweetsResponseDTO> {
+    const tweets = await this.twitterApiProvider.searchTweets(keyword);
+
+    return tweets;
   }
 }
 
