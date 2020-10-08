@@ -33,14 +33,10 @@ This is a simple Twitter Finder, using NodeJs to Backend with Typescript and SOL
   cd Web
   yarn
   yarn start
+
+  or
+
+  cd Web
+  npm install
+  npm run start
   ```
-
-or
-
-cd Web
-npm install
-npm run start
-
-```
-
-```
