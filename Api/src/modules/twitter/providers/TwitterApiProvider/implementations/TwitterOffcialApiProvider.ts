@@ -18,7 +18,7 @@ export default class TwitterOffcialApiProvider implements ITwitterApiProvider {
     keyword: string,
   ): Promise<ISearchTweetsResponseDTO> {
     try {
-      const params = new URLSearchParams([['q', keyword]]);
+      const params = new URLSearchParams([['q', keyword],['result_type','recent'],['count','10']]);
 
       const response = await this.twitterApi.get('/search/tweets.json', {
         params,
