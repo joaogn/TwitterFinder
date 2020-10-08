@@ -4,6 +4,13 @@ This is a simple Twitter Finder, using NodeJs to Backend with Typescript and SOL
 
 ## RUN
 
+- Create .env file on Api folder and add
+
+  ```
+  TWITTER_API_URL=https://api.twitter.com/1.1/
+  TWITTER_API_TOKEN=<twitter-bearer-token>
+  ```
+
 - Backend With Docker
 
   ```
