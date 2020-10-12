@@ -47,7 +47,10 @@ const Home: React.FC = () => {
   const searchTweets = useCallback(async () => {
     setSearchLoading(true);
     try {
-      const tweetsResponse = await api.get(`/twitter/search?q=${keyword}`);
+      const params = new URLSearchParams([['q', keyword]]);
+      const tweetsResponse = await api.get('/twitter/search', {
+        params
+      });
       setSearchList(prevSearchList => [
         {
           id: uuidv4(),
