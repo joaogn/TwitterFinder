@@ -1,11 +1,13 @@
 FROM node:12
 
-WORKDIR /usr/src/app
+# CREATE ARGs
+ARG nameImage="twitter-finder"
+ARG port=8081
 
 COPY . .
 
 RUN npm install && npm run build
 
-EXPOSE 3333:3333
+EXPOSE $port
 
 CMD [ "node", "dist/shared/infra/http/server.js" ]

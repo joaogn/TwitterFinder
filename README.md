@@ -47,3 +47,12 @@ This is a simple Twitter Finder, using NodeJs to Backend with Typescript and SOL
   npm install
   npm run start
   ```
+
+  Deploy Api on Heroku
+
+  ```
+    cd Api
+    heroku container:login
+    heroku container:push web --arg ENV=live,HTTPS=on  --app=<app-name>
+    heroku container:release web --app=<app-name>
+  ```
