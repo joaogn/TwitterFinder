@@ -51,7 +51,7 @@ const UserModal: React.FC<Props> = ({ id, isOpen, setIsOpen }) => {
     if (id) {
       getProfileData();
     }
-  }, [id]);
+  }, [id,setIsOpen]);
 
   return (
     <Container isOpen={isOpen}>
